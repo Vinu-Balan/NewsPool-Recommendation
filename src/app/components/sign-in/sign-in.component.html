@@ -1,0 +1,81 @@
+<div class="bg-grey-lighter min-h-screen flex flex-col">
+  <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
+    <h2 class="text-3xl font-bold-800">Sign In to NewsPool</h2>
+      <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
+          <h1 class="mb-8 text-3xl text-center">Sign In</h1>
+
+          <input 
+          type="email"
+          class="block border border-grey-light w-full p-3 rounded mb-4"
+          placeholder="Username" #userName
+          required
+           />
+
+          <input 
+          type="password"
+          class="block border border-grey-light w-full p-3 rounded mb-4"
+          placeholder="Password" #userPassword
+          required />
+          <button type="button" class="w-full text-center py-3 rounded bg-green text-white hover:bg-green-dark focus:outline-none my-1" style="background-color: green;" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">Sign In</button>
+      </div>
+      <div class="text-grey-dark mt-6">
+       <span>or</span>
+    </div>
+    <div class="text-grey-dark mt-6">
+      
+      <button
+            type="button"
+            class="btn googleBtn"
+            (click)="authService.GoogleAuth()"
+          >
+            <i class="fa-brands fa-google"></i>
+            Continue with Google
+          </button>
+
+          <div class="forgotPassword mt-5">
+            <span routerLink="/forgot-password">Forgot Password?</span>
+          </div>
+  </div>
+      <div class="text-grey-dark mt-6">
+        Don't have an account?
+          <a class="no-underline border-b border-blue text-blue" routerLink="/register-user">
+              Sign Up
+          </a>.
+      </div>
+  </div>
+</div>
+
+<div class="displayTable">
+    <div class="displayTableCell">
+      <div class="authBlock">
+        <h3>Sign In</h3>
+        <div class="formGroup">
+          <input type="text" class="formControl" placeholder="Username" #userName required>
+        </div>
+        <div class="formGroup">
+          <input type="password" class="formControl" placeholder="Password" #userPassword required>
+        </div>
+        <!-- Calling SignIn Api from AuthService -->
+        <div class="formGroup">
+          <input type="button" class="btn btnPrimary" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
+        </div>
+        <div class="formGroup">
+          <span class="or"><span class="orInner">Or</span></span>
+        </div>
+        <!-- Calling GoogleAuth Api from AuthService -->
+        <div class="formGroup">
+          <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
+            <i class="fab fa-google-plus-g"></i>
+            Log in with Google
+          </button>
+        </div>
+        <div class="forgotPassword">
+          <span routerLink="/forgot-password">Forgot Password?</span>
+        </div>
+      </div>
+      <div class="redirectToLogin">
+        <span>Don't have an account?<span class="redirect" routerLink="/register-user"> Sign Up</span></span>
+      </div>
+    </div>
+  </div>
+  

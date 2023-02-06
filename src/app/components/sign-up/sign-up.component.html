@@ -1,0 +1,111 @@
+<div class="bg-grey-lighter min-h-screen flex flex-col">
+  <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
+      <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
+          <h1 class="mb-8 text-3xl text-center">Sign up</h1>
+
+          <input 
+          type="email"
+          class="block border border-grey-light w-full p-3 rounded mb-4"
+          placeholder="Email Address"
+          #userEmail
+          required
+           />
+
+          <input 
+          type="password"
+          class="block border border-grey-light w-full p-3 rounded mb-4"
+          placeholder="Password"
+          #userPwd
+          required />
+          <button
+              type="button"
+              value="Sign Up"
+            (click)="authService.SignUp(userEmail.value, userPwd.value)" style="background-color: green;"
+              class="w-full text-center py-3 rounded bg-green text-white hover:bg-green-dark focus:outline-none my-1"
+          >Create Account</button>
+
+          <div class="text-center text-sm text-grey-dark mt-4">
+              By signing up, you agree to the 
+              <a class="no-underline border-b border-grey-dark text-grey-dark" href="#">
+                  Terms of Service
+              </a> and 
+              <a class="no-underline border-b border-grey-dark text-grey-dark" href="#">
+                  Privacy Policy
+              </a>
+          </div>
+      </div>
+      <div class="text-grey-dark mt-6">
+       <span>or</span>
+    </div>
+    <div class="text-grey-dark mt-6">
+      <button
+            type="button"
+            class="btn googleBtn"
+            (click)="authService.GoogleAuth()"
+          >
+            <i class="fa-brands fa-google"></i>
+            Continue with Google
+          </button>
+  </div>
+      <div class="text-grey-dark mt-6">
+          Already have an account? 
+          <a class="no-underline border-b border-blue text-blue" routerLink="/sign-in">
+              Log in
+          </a>.
+      </div>
+  </div>
+</div>
+
+<!--
+<div class="displayTable">
+    <div class="displayTableCell">
+      <div class="authBlock">
+        <h3>Sign Up</h3>
+        <div class="formGroup">
+          <input
+            type="email"
+            class="formControl"
+            placeholder="Email Address"
+            #userEmail
+            required
+          />
+        </div>
+        <div class="formGroup">
+          <input
+            type="password"
+            class="formControl"
+            placeholder="Password"
+            #userPwd
+            required
+          />
+        </div>
+        <div class="formGroup">
+          <input
+            type="button"
+            class="btn btnPrimary"
+            value="Sign Up"
+            (click)="authService.SignUp(userEmail.value, userPwd.value)"
+          />
+        </div>
+        <div class="formGroup">
+          <span class="or"><span class="orInner">Or</span></span>
+        </div>
+        <div class="formGroup">
+          <button
+            type="button"
+            class="btn googleBtn"
+            (click)="authService.GoogleAuth()"
+          >
+            <i class="fab fa-google-plus-g"></i>
+            Continue with Google
+          </button>
+        </div>
+      </div>
+      <div class="redirectToLogin">
+        <span
+          >Already have an account?
+          <span class="redirect" routerLink="/sign-in">Log In</span></span
+        >
+      </div>
+    </div>
+  </div>-->

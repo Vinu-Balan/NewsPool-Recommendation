@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class NewsService {
 
-  api_key = 'your api key';
+  api_key = '1cc70a9372024630b54208a9f0aad783';
   constructor(private http: HttpClient) { }
 
 
@@ -21,6 +21,9 @@ export class NewsService {
 
   getArticlesByID(source: String) {
     return this.http.get('https://newsapi.org/v2/top-headlines?sources=' + source + '&apiKey=' + this.api_key);
+  }
+  getArticlesByQuery(query: String){
+    return this.http.get('https://newsapi.org/v2/everything?q='+ query +'&from=2023-02-04&to=2023-02-04'+'&from=2023-01-04&sortBy=publishedAt' + '&apiKey=' + this.api_key);
   }
 
 }

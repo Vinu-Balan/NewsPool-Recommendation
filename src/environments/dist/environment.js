@@ -1,19 +1,21 @@
+"use strict";
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
-
-export const environment = {
-  production: false,
-  firebase: {
-    apiKey: "AIzaSyC6M46-UeSXogd24_c53CL1r0ichaj15ok",
-  authDomain: "newspool-60f63.firebaseapp.com",
-  projectId: "newspool-60f63",
-  storageBucket: "newspool-60f63.appspot.com",
-  messagingSenderId: "153924195932",
-  appId: "1:153924195932:web:60cfbbffc980cc6e27f899",
-  measurementId: "G-HC8QXY3WKP",
-  databaseURL: "https://newspool-60f63-default-rtdb.firebaseio.com/",
-  }
+exports.__esModule = true;
+exports.environment = void 0;
+exports.environment = {
+    production: false,
+    firebase: {
+        apiKey: "AIzaSyC6M46-UeSXogd24_c53CL1r0ichaj15ok",
+        authDomain: "newspool-60f63.firebaseapp.com",
+        projectId: "newspool-60f63",
+        storageBucket: "newspool-60f63.appspot.com",
+        messagingSenderId: "153924195932",
+        appId: "1:153924195932:web:60cfbbffc980cc6e27f899",
+        measurementId: "G-HC8QXY3WKP",
+        databaseURL: "https://newspool-60f63-default-rtdb.firebaseio.com/"
+    }
 };
 /*
  * For easier debugging in development mode, you can import the following file
